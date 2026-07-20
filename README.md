@@ -37,7 +37,7 @@ El workflow de GitHub Actions publica todo en la rama `gh-pages`:
 | --- | --- | --- |
 | `main` | Produccion | `https://kenta2097.github.io/psy-page/` |
 | `develop` | Preview/Dev | `https://kenta2097.github.io/psy-page/dev/` |
-| Pull request | Preview automatico | `https://kenta2097.github.io/psy-page/pr/<numero>/` |
+| Pull request | Preview automatico | `https://kenta2097.github.io/psy-page/pr/pr-<numero>/` |
 
 Configurar GitHub Pages en `Settings > Pages` con:
 
