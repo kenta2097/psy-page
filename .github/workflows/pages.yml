@@ -4,44 +4,126 @@ on:
   push:
     branches:
       - main
+      - develop
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - closed
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
+  pull-requests: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref_name }}
+  cancel-in-progress: true
+
+env:
+  PAGES_BRANCH: gh-pages
+  SITE_DIR: dist
 
 jobs:
-  deploy:
+  build:
+    name: Build static site
+    if: github.event_name != 'pull_request' || github.event.action != 'closed'
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
       - name: Prepare static site
         run: |
-          mkdir -p dist
-          cp index.html styles.css app.js dist/
-          touch dist/.nojekyll
+          mkdir -p "$SITE_DIR"
+          cp index.html styles.css app.js "$SITE_DIR/"
+          touch "$SITE_DIR/.nojekyll"
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          path: dist
+          name: static-site
+          path: ${{ env.SITE_DIR }}
+          if-no-files-found: error
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  deploy-production:
+    name: Deploy production
+    needs: build
+    if: github.event_name == 'push' && github.ref_name == 'main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages-production
+      url: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+
+    steps:
+      - name: Download static site
+        uses: actions/download-artifact@v4
+        with:
+          name: static-site
+          path: ${{ env.SITE_DIR }}
+
+      - name: Deploy production to root
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: ${{ env.PAGES_BRANCH }}
+          publish_dir: ${{ env.SITE_DIR }}
+          destination_dir: .
+          keep_files: true
+          full_commit_message: Deploy production ${{ github.sha }}
+
+  deploy-dev:
+    name: Deploy dev preview
+    needs: build
+    if: github.event_name == 'push' && github.ref_name == 'develop'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages-dev
+      url: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/dev/
+
+    steps:
+      - name: Download static site
+        uses: actions/download-artifact@v4
+        with:
+          name: static-site
+          path: ${{ env.SITE_DIR }}
+
+      - name: Deploy develop to /dev
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: ${{ env.PAGES_BRANCH }}
+          publish_dir: ${{ env.SITE_DIR }}
+          destination_dir: dev
+          keep_files: true
+          full_commit_message: Deploy dev ${{ github.sha }}
+
+  deploy-pr-preview:
+    name: Deploy PR preview
+    needs: build
+    if: always() && github.event_name == 'pull_request' && (github.event.action == 'closed' || needs.build.result == 'success')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages-pr-${{ github.event.pull_request.number }}
+      url: ${{ steps.preview.outputs.preview-url }}
+
+    steps:
+      - name: Download static site
+        if: github.event.action != 'closed'
+        uses: actions/download-artifact@v4
+        with:
+          name: static-site
+          path: ${{ env.SITE_DIR }}
+
+      - name: Deploy or remove PR preview
+        id: preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          source-dir: ${{ env.SITE_DIR }}
+          preview-branch: ${{ env.PAGES_BRANCH }}
+          umbrella-dir: pr
+          pages-base-url: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          action: auto
