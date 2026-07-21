@@ -308,48 +308,17 @@ select {
 }
 
 .brand-mark {
-  position: relative;
   display: grid;
   place-items: center;
   width: 42px;
   height: 42px;
   flex: 0 0 42px;
-  border-radius: 50%;
-  background: var(--sage-dark);
-  color: var(--white);
-  font-weight: 800;
-  box-shadow: 0 8px 18px rgba(36, 50, 48, 0.18);
 }
 
-.brand-symbol {
-  position: absolute;
-  display: block;
-}
-
-.brand-symbol-ring {
-  inset: 9px;
-  border: 2px solid rgba(255, 255, 255, 0.92);
-  border-radius: 50%;
-}
-
-.brand-symbol-dot {
-  top: 17px;
-  left: 17px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.96);
-}
-
-.brand-symbol-arc {
-  width: 18px;
-  height: 18px;
-  right: 8px;
-  bottom: 8px;
-  border-right: 2px solid rgba(255, 255, 255, 0.88);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.88);
-  border-radius: 0 0 18px 0;
-  transform: rotate(8deg);
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  filter: drop-shadow(0 8px 18px rgba(36, 50, 48, 0.18));
 }
 
 .brand strong,
@@ -1081,8 +1050,7 @@ details p {
 }
 
 .footer-brand .brand-mark {
-  background: var(--sage);
-  color: #16211f;
+  opacity: 0.96;
 }
 
 .footer-brand small,
