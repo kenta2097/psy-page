@@ -487,6 +487,24 @@ h3 {
   transition: transform 160ms ease, border-color 160ms ease;
 }
 
+.guidance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.guidance-card {
+  min-height: 250px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.guidance-list {
+  margin-top: 14px;
+}
+
 .process-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -837,6 +855,7 @@ details p {
   .specialty-grid,
   .pricing-grid,
   .resource-grid,
+  .guidance-grid,
   .process-list,
   .split-section,
   .reverse-split,
