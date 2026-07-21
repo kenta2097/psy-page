@@ -39,6 +39,7 @@ jobs:
         run: |
           mkdir -p "$SITE_DIR"
           cp index.html styles.css app.js "$SITE_DIR/"
+          cp -r images "$SITE_DIR/"
           touch "$SITE_DIR/.nojekyll"
 
       - name: Upload artifact

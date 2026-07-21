@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Consulta de psicología presencial y online con reserva de citas, terapia individual, terapia de pareja y acompañamiento emocional profesional."
+      content="Consulta de psicología clínica en Sevilla con enfoque en ansiedad, estrés, regulación emocional, vínculos y acompañamiento terapéutico basado en evidencia."
     />
-    <title>Psicología Montaner | Consulta de psicología presencial y online</title>
+    <title>Consulta Clínica | Abel Montaner, Psicólogo General Sanitario</title>
     <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="app.js" defer></script>
@@ -17,83 +19,98 @@
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
     <header class="site-header" data-header>
-      <a class="brand" href="#inicio" aria-label="Psicología Montaner">
-        <span class="brand-mark">PM</span>
-        <span>
-          <strong>Psicología Montaner</strong>
-          <small>Consulta sanitaria</small>
+      <a class="brand" href="#inicio" aria-label="Abel Montaner">
+        <span class="brand-mark" aria-hidden="true">
+          <img class="brand-icon" src="images/favicon.svg" alt="" />
+        </span>
+        <span class="brand-copy">
+          <strong>Abel Montaner</strong>
+          <small>Psicólogo General Sanitario</small>
         </span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir navegación">
-        <i data-lucide="menu" aria-hidden="true"></i>
-      </button>
+      <div class="header-tools">
+        <div class="theme-switcher" aria-label="Selector temporal de diseño">
+          <label for="theme-select">Diseño</label>
+          <select id="theme-select" name="theme">
+            <option value="base">Base actual</option>
+            <option value="professional">Profesional azul</option>
+            <option value="human">Cercana salvia</option>
+            <option value="premium">Premium petróleo</option>
+            <option value="balanced">Equilibrada</option>
+          </select>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir navegación">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
 
       <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="#especialidades">Especialidades</a>
-        <a href="#tarifas">Tarifas</a>
-        <a href="#faq">FAQ</a>
-        <a class="nav-cta" href="#reserva">
-          <i data-lucide="calendar-check" aria-hidden="true"></i>
-          Reservar
+        <a href="#especialidades">Servicios clínicos</a>
+        <a href="#trayectoria">Proceso clínico</a>
+        <a href="#formacion">Modelo terapéutico</a>
+        <a class="nav-cta" href="#contacto">
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+          Solicitar valoración
         </a>
       </nav>
     </header>
 
     <main id="contenido">
       <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <div class="hero-media" role="img" aria-label="Consulta luminosa preparada para una sesión de psicología"></div>
+        <div class="hero-media" role="img" aria-label="Imagen de cabecera profesional de Abel Montaner"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content section-shell">
-          <p class="eyebrow">Psicología presencial y online</p>
-          <h1 id="hero-title">Psicología para recuperar calma, claridad y bienestar emocional.</h1>
+          <p class="eyebrow">Consulta clínica | Sevilla y alrededores</p>
+          <h1 id="hero-title">Atención psicológica clínica para recuperar equilibrio emocional y bienestar.</h1>
           <p class="hero-copy">
-            Acompañamiento profesional para ansiedad, estrés, autoestima, relaciones y gestión emocional, con un proceso de reserva claro y revisado personalmente.
+            Atención profesional para ansiedad, estrés, regulación emocional, duelo y dificultades relacionales, con una intervención cercana, estructurada y basada en evidencia.
           </p>
           <div class="hero-actions" aria-label="Acciones principales">
-            <a class="button button-primary" href="#reserva">
+            <a class="button button-primary" href="#contacto">
               <i data-lucide="calendar-plus" aria-hidden="true"></i>
-              Reservar cita
+              Solicitar primera valoración
             </a>
-            <a class="button button-ghost" href="#sobre-mi">
-              <i data-lucide="user-round" aria-hidden="true"></i>
-              Conocer más
+            <a class="button button-ghost" href="#especialidades">
+              <i data-lucide="stethoscope" aria-hidden="true"></i>
+              Ver servicios clínicos
             </a>
           </div>
           <dl class="trust-strip" aria-label="Datos clave de la consulta">
+            <div>
+              <dt>Enfoque</dt>
+              <dd>Psicología clínica</dd>
+            </div>
             <div>
               <dt>Modalidad</dt>
               <dd>Presencial y online</dd>
             </div>
             <div>
-              <dt>Reserva</dt>
-              <dd>Aprobación manual</dd>
-            </div>
-            <div>
-              <dt>Videollamada</dt>
-              <dd>Google Meet</dd>
+              <dt>Primera cita</dt>
+              <dd>Valoración individual</dd>
             </div>
           </dl>
         </div>
       </section>
 
-      <section class="section intro-band" aria-label="Resumen de servicios">
+      <section class="section intro-band" aria-label="Modalidades de atención">
         <div class="section-shell intro-grid">
           <article>
-            <i data-lucide="heart-handshake" aria-hidden="true"></i>
-            <h2>Terapia con un enfoque cercano y profesional</h2>
-            <p>Sesiones individuales, de pareja y online orientadas a entender lo que ocurre, aliviar el malestar y construir herramientas sostenibles.</p>
+            <i data-lucide="clipboard-list" aria-hidden="true"></i>
+            <h2>Evaluación clínica inicial</h2>
+            <p>Primera valoración para comprender el motivo de consulta, contexto personal y objetivos terapéuticos.</p>
           </article>
           <article>
-            <i data-lucide="shield-check" aria-hidden="true"></i>
-            <h2>Proceso cuidado de principio a fin</h2>
-            <p>La solicitud de cita queda pendiente hasta revisión profesional, con confirmación, pago seguro y recordatorios automatizados.</p>
+            <i data-lucide="brain-circuit" aria-hidden="true"></i>
+            <h2>Intervención psicoterapéutica</h2>
+            <p>Plan de trabajo adaptado para reducir malestar emocional y mejorar funcionamiento cotidiano.</p>
           </article>
           <article>
-            <i data-lucide="map-pin" aria-hidden="true"></i>
-            <h2>Consulta local con opción online</h2>
-            <p>Atención presencial en consulta y sesiones por videollamada para mantener continuidad terapéutica desde cualquier lugar.</p>
+            <i data-lucide="refresh-cw" aria-hidden="true"></i>
+            <h2>Seguimiento y ajuste</h2>
+            <p>Revisión continua de avances para ajustar el proceso terapéutico según evolución y necesidades.</p>
           </article>
         </div>
       </section>
@@ -102,8 +119,8 @@
         <div class="section-shell split-section">
           <div class="portrait-wrap">
             <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85"
-              alt="Psicólogo en una consulta profesional"
+              src="images/abel-portrait.jpeg"
+              alt="Foto de perfil de Abel Montaner"
               loading="lazy"
             />
           </div>
@@ -111,13 +128,13 @@
             <p class="eyebrow">Sobre mí</p>
             <h2 id="about-title">Abel Montaner, psicólogo general sanitario</h2>
             <p>
-              Trabajo desde una mirada integradora, combinando evaluación rigurosa, vínculo terapéutico y herramientas prácticas adaptadas a cada persona. Mi objetivo es que el espacio de terapia sea seguro, claro y útil desde las primeras sesiones.
+              Ofrezco un espacio clínico de escucha, evaluación y acompañamiento para personas que atraviesan ansiedad, estrés o dificultades emocionales y relacionales. Mi trabajo combina estructura terapéutica, calidez y respeto por cada ritmo personal.
             </p>
             <ul class="checked-list">
-              <li>Especialización en ansiedad, estrés, autoestima y gestión emocional.</li>
-              <li>Experiencia en terapia individual, terapia de pareja y acompañamiento online.</li>
-              <li>N.º de colegiado: M-00000.</li>
-              <li>Consulta presencial y terapia online mediante Google Meet.</li>
+              <li>Psicología clínica y psicoterapia con enfoque basado en evidencia.</li>
+              <li>Intervención en ansiedad, estrés, estado de ánimo y conflictos relacionales.</li>
+              <li>Acompañamiento cercano para recuperar estabilidad y autonomía emocional.</li>
+              <li>Atención presencial y online en Sevilla y alrededores.</li>
             </ul>
           </div>
         </div>
@@ -126,287 +143,135 @@
       <section class="section soft-section" id="especialidades" aria-labelledby="specialties-title">
         <div class="section-shell">
           <div class="section-heading">
-            <p class="eyebrow">Especialidades</p>
-            <h2 id="specialties-title">Áreas de acompañamiento psicológico</h2>
-            <p>Una atención centrada en comprender el origen del malestar y convertirlo en cambios concretos en la vida diaria.</p>
+            <p class="eyebrow">Servicios clínicos</p>
+            <h2 id="specialties-title">Principales motivos de consulta</h2>
+            <p>Servicios de atención psicológica en modalidad presencial y online, orientados a reducir el malestar, mejorar la regulación y fortalecer recursos personales.</p>
           </div>
 
           <div class="specialty-grid">
             <article class="specialty-card">
               <i data-lucide="activity" aria-hidden="true"></i>
               <h3>Ansiedad</h3>
-              <p>Trabajo sobre preocupación, ataques de pánico, tensión corporal y anticipación constante.</p>
+              <p>Abordaje de preocupación persistente, hipervigilancia, tensión y dificultad para desconectar.</p>
             </article>
             <article class="specialty-card">
               <i data-lucide="briefcase-business" aria-hidden="true"></i>
               <h3>Estrés</h3>
-              <p>Recuperación de equilibrio ante sobrecarga laboral, exigencia sostenida o agotamiento.</p>
+              <p>Intervención en sobrecarga, agotamiento emocional y presión cotidiana.</p>
             </article>
             <article class="specialty-card">
               <i data-lucide="sparkles" aria-hidden="true"></i>
-              <h3>Autoestima</h3>
-              <p>Fortalecimiento de seguridad personal, límites, autoconcepto y toma de decisiones.</p>
+              <h3>Regulación emocional</h3>
+              <p>Trabajo en impulsividad, sensibilidad intensa y oscilaciones del estado de ánimo.</p>
             </article>
             <article class="specialty-card">
               <i data-lucide="cloud-rain" aria-hidden="true"></i>
-              <h3>Depresión</h3>
-              <p>Acompañamiento en tristeza persistente, apatía, culpa y pérdida de motivación.</p>
+              <h3>Estado de ánimo</h3>
+              <p>Apoyo en apatía, desmotivación, tristeza persistente y malestar emocional sostenido.</p>
             </article>
             <article class="specialty-card">
               <i data-lucide="message-circle-heart" aria-hidden="true"></i>
-              <h3>Terapia de pareja</h3>
-              <p>Comunicación, conflictos recurrentes, acuerdos, confianza y reparación del vínculo.</p>
+              <h3>Vínculos y pareja</h3>
+              <p>Intervención en conflictos relacionales, comunicación y etapas de crisis vincular.</p>
             </article>
             <article class="specialty-card">
-              <i data-lucide="laptop" aria-hidden="true"></i>
-              <h3>Terapia online</h3>
-              <p>Sesiones por videollamada con privacidad, continuidad y acompañamiento profesional.</p>
+              <i data-lucide="heart-crack" aria-hidden="true"></i>
+              <h3>Duelo y adaptación</h3>
+              <p>Acompañamiento en pérdidas, cambios de etapa y reorganización emocional.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="como-funciona" aria-labelledby="process-title">
+      <section class="section" id="orientacion-clinica" aria-labelledby="guidance-title">
         <div class="section-shell">
           <div class="section-heading compact-heading">
-            <p class="eyebrow">Cómo funciona</p>
-            <h2 id="process-title">Un proceso sencillo, con revisión manual antes de confirmar</h2>
+            <p class="eyebrow">Orientacion clinica</p>
+            <h2 id="guidance-title">Cuándo pedir ayuda y que esperar en consulta</h2>
+            <p>Informacion clara para tomar una decision con calma antes de iniciar el proceso terapeutico.</p>
+          </div>
+          <div class="guidance-grid">
+            <article class="guidance-card">
+              <h3>Cuando pedir ayuda</h3>
+              <ul class="checked-list guidance-list">
+                <li>Ansiedad o preocupacion persistente que afecta al descanso o al trabajo.</li>
+                <li>Sensacion de bloqueo emocional, irritabilidad o desbordamiento frecuente.</li>
+                <li>Conflictos relacionales repetidos o dificultad para sostener limites.</li>
+                <li>Duelo, cambios vitales o agotamiento que te cuesta manejar en solitario.</li>
+              </ul>
+            </article>
+            <article class="guidance-card">
+              <h3>Que esperar en la primera sesion</h3>
+              <ul class="checked-list guidance-list">
+                <li>Espacio de escucha confidencial para comprender tu motivo de consulta.</li>
+                <li>Evaluacion inicial del malestar, contexto y factores que lo mantienen.</li>
+                <li>Definicion de objetivos terapeuticos realistas y priorizados.</li>
+                <li>Propuesta de plan de trabajo con frecuencia y siguientes pasos.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trayectoria" aria-labelledby="process-title">
+        <div class="section-shell">
+          <div class="section-heading compact-heading">
+            <p class="eyebrow">Proceso clínico</p>
+            <h2 id="process-title">Cómo se desarrolla la atención en consulta</h2>
           </div>
           <ol class="process-list">
             <li>
               <span>1</span>
               <div>
-                <h3>Solicita una cita</h3>
-                <p>Elige modalidad, servicio, fecha y hora preferida.</p>
+                <h3>Primera valoración</h3>
+                <p>Entrevista clínica para evaluar el motivo de consulta y definir objetivos terapéuticos.</p>
               </div>
             </li>
             <li>
               <span>2</span>
               <div>
-                <h3>Revisamos disponibilidad</h3>
-                <p>La solicitud queda pendiente hasta confirmar que encaja con la agenda clínica.</p>
+                <h3>Plan de intervención</h3>
+                <p>Diseño de un plan personalizado con estrategias aplicables a la vida diaria.</p>
               </div>
             </li>
             <li>
               <span>3</span>
               <div>
-                <h3>Recibes confirmación</h3>
-                <p>Se puede aceptar, rechazar o proponer otra fecha con un comentario personalizado.</p>
+                <h3>Seguimiento terapéutico</h3>
+                <p>Sesiones periódicas para trabajar síntomas, patrones y recursos personales.</p>
               </div>
             </li>
             <li>
               <span>4</span>
               <div>
-                <h3>Pago y sesión</h3>
-                <p>Pago seguro mediante plataforma externa y enlace de Google Meet si la sesión es online.</p>
+                <h3>Revisión de avances</h3>
+                <p>Evaluación continua del progreso y ajustes para consolidar cambios estables.</p>
               </div>
             </li>
           </ol>
         </div>
       </section>
 
-      <section class="section online-section" id="terapia-online" aria-labelledby="online-title">
+      <section class="section online-section" id="formacion" aria-labelledby="online-title">
         <div class="section-shell split-section reverse-split">
           <div class="section-copy">
-            <p class="eyebrow">Terapia online</p>
-            <h2 id="online-title">Sesiones por Google Meet con recordatorios automáticos</h2>
+            <p class="eyebrow">Modelo terapéutico</p>
+            <h2 id="online-title">Práctica clínica cercana con base académica sólida</h2>
             <p>
-              La terapia online mantiene el mismo cuidado clínico que la sesión presencial, con enlace privado, pago seguro y recordatorios 24 horas y 1 hora antes de la cita.
+              Formación en Psicología General Sanitaria y experiencia en intervención Cognitivo-Conductual y Sistémica, integrando evaluación rigurosa, vínculo terapéutico y herramientas prácticas adaptadas a cada caso.
             </p>
             <div class="feature-row">
-              <span><i data-lucide="video" aria-hidden="true"></i> Meet privado</span>
-              <span><i data-lucide="credit-card" aria-hidden="true"></i> Stripe</span>
-              <span><i data-lucide="bell-ring" aria-hidden="true"></i> Recordatorios</span>
+              <span><i data-lucide="graduation-cap" aria-hidden="true"></i> Grado en Psicología</span>
+              <span><i data-lucide="award" aria-hidden="true"></i> Máster PGS finalizado</span>
+              <span><i data-lucide="brain" aria-hidden="true"></i> Clínica, apego y perinatal</span>
             </div>
           </div>
           <div class="media-panel">
             <img
-              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=85"
-              alt="Profesional atendiendo una consulta online por videollamada"
+              src="images/abel-cover.jpeg"
+              alt="Imagen de cabecera profesional usada en LinkedIn"
               loading="lazy"
             />
-          </div>
-        </div>
-      </section>
-
-      <section class="section pricing-section" id="tarifas" aria-labelledby="pricing-title">
-        <div class="section-shell">
-          <div class="section-heading">
-            <p class="eyebrow">Tarifas</p>
-            <h2 id="pricing-title">Precios transparentes antes de reservar</h2>
-            <p>Los importes pueden adaptarse a la consulta real y conectarse a Stripe para depósito o pago completo.</p>
-          </div>
-          <div class="pricing-grid">
-            <article class="price-card">
-              <h3>Primera sesión</h3>
-              <p class="price">60€</p>
-              <p>Evaluación inicial, objetivos terapéuticos y encuadre de trabajo.</p>
-            </article>
-            <article class="price-card highlight-card">
-              <h3>Terapia individual</h3>
-              <p class="price">60€</p>
-              <p>Sesión de seguimiento presencial u online de 50 minutos.</p>
-            </article>
-            <article class="price-card">
-              <h3>Terapia de pareja</h3>
-              <p class="price">70€</p>
-              <p>Sesión conjunta para comunicación, acuerdos y trabajo relacional.</p>
-            </article>
-            <article class="price-card">
-              <h3>Depósito de reserva</h3>
-              <p class="price">30€</p>
-              <p>Pago posterior a la aprobación manual de la solicitud.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section booking-section" id="reserva" aria-labelledby="booking-title">
-        <div class="section-shell booking-grid">
-          <div class="section-copy">
-            <p class="eyebrow">Reserva de citas</p>
-            <h2 id="booking-title">Solicita una cita y recibe respuesta personalizada</h2>
-            <p>
-              El flujo recomendado combina solicitud, revisión manual, pago seguro y confirmación definitiva. Esta versión prepara la solicitud por correo para mantener la web compatible con GitHub Pages.
-            </p>
-            <ul class="checked-list">
-              <li>Selección de servicio, modalidad, fecha y hora.</li>
-              <li>Captura de datos de contacto y origen del paciente.</li>
-              <li>Estado pendiente hasta aprobación o propuesta de nueva fecha.</li>
-              <li>Preparada para integrar Lapsula, Google Calendar, Stripe o un sistema equivalente.</li>
-            </ul>
-          </div>
-
-          <form class="booking-form" id="booking-form" method="post" action="mailto:contacto@psicologiamontaner.es" enctype="text/plain">
-            <div class="form-row two-columns">
-              <label>
-                Nombre y apellidos
-                <input name="nombre" type="text" autocomplete="name" required />
-              </label>
-              <label>
-                Email
-                <input name="email" type="email" autocomplete="email" required />
-              </label>
-            </div>
-            <div class="form-row two-columns">
-              <label>
-                Teléfono
-                <input name="telefono" type="tel" autocomplete="tel" required />
-              </label>
-              <label>
-                Tipo de sesión
-                <select name="servicio" required>
-                  <option value="">Seleccionar</option>
-                  <option>Terapia individual</option>
-                  <option>Terapia de pareja</option>
-                  <option>Terapia online</option>
-                  <option>Evaluación inicial</option>
-                </select>
-              </label>
-            </div>
-            <div class="form-row two-columns">
-              <label>
-                Fecha preferida
-                <input name="fecha" type="date" required />
-              </label>
-              <label>
-                Hora preferida
-                <input name="hora" type="time" required />
-              </label>
-            </div>
-            <div class="form-row two-columns">
-              <label>
-                Modalidad
-                <select name="modalidad" required>
-                  <option value="">Seleccionar</option>
-                  <option>Presencial</option>
-                  <option>Online</option>
-                </select>
-              </label>
-              <label>
-                Cómo nos has conocido
-                <select name="origen">
-                  <option>Google</option>
-                  <option>Instagram</option>
-                  <option>Facebook</option>
-                  <option>TikTok</option>
-                  <option>LinkedIn</option>
-                  <option>Recomendación</option>
-                  <option>Otros</option>
-                </select>
-              </label>
-            </div>
-            <label>
-              Comentario opcional
-              <textarea name="mensaje" rows="4"></textarea>
-            </label>
-            <label class="consent-check">
-              <input name="privacidad" type="checkbox" required />
-              Acepto la política de privacidad y el tratamiento de mis datos para gestionar la solicitud.
-            </label>
-            <button class="button button-primary full-button" type="submit">
-              <i data-lucide="send" aria-hidden="true"></i>
-              Enviar solicitud
-            </button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
-          </form>
-        </div>
-      </section>
-
-      <section class="section soft-section" id="faq" aria-labelledby="faq-title">
-        <div class="section-shell faq-grid">
-          <div class="section-heading align-start">
-            <p class="eyebrow">Preguntas frecuentes</p>
-            <h2 id="faq-title">Dudas habituales antes de empezar</h2>
-          </div>
-          <div class="faq-list">
-            <details open>
-              <summary>¿Cuánto dura una sesión?</summary>
-              <p>Las sesiones individuales duran aproximadamente 50 minutos. Las sesiones de pareja pueden requerir más tiempo según el caso.</p>
-            </details>
-            <details>
-              <summary>¿La cita queda confirmada al enviar el formulario?</summary>
-              <p>No. La solicitud queda pendiente hasta revisión manual. Después recibirás aceptación, rechazo o propuesta de nueva fecha.</p>
-            </details>
-            <details>
-              <summary>¿Cómo funciona la terapia online?</summary>
-              <p>Tras la confirmación y el pago, recibirás un enlace privado de Google Meet y recordatorios antes de la sesión.</p>
-            </details>
-            <details>
-              <summary>¿Cuál es la política de cancelación?</summary>
-              <p>El modelo recomendado permite reembolso o cambio de fecha si cancelas con más de 24 horas de antelación.</p>
-            </details>
-            <details>
-              <summary>¿Qué métodos de pago se pueden usar?</summary>
-              <p>La integración recomendada es Stripe, compatible con tarjeta, Apple Pay, Google Pay y Bizum cuando esté disponible.</p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="section resources-section" id="recursos" aria-labelledby="resources-title">
-        <div class="section-shell">
-          <div class="section-heading">
-            <p class="eyebrow">Blog y recursos</p>
-            <h2 id="resources-title">Contenido para posicionamiento y confianza</h2>
-            <p>Una línea editorial sencilla ayuda al SEO local y refuerza la autoridad profesional de la consulta.</p>
-          </div>
-          <div class="resource-grid">
-            <article class="resource-card">
-              <span>Ansiedad</span>
-              <h3>Cómo reconocer cuándo la preocupación se ha vuelto excesiva</h3>
-              <a href="#contacto">Consultar disponibilidad</a>
-            </article>
-            <article class="resource-card">
-              <span>Relaciones</span>
-              <h3>Señales de que una conversación necesita otro ritmo</h3>
-              <a href="#contacto">Consultar disponibilidad</a>
-            </article>
-            <article class="resource-card">
-              <span>Autoestima</span>
-              <h3>Límites personales sin culpa ni rigidez</h3>
-              <a href="#contacto">Consultar disponibilidad</a>
-            </article>
           </div>
         </div>
       </section>
@@ -415,25 +280,25 @@
         <div class="section-shell contact-grid">
           <div>
             <p class="eyebrow">Contacto</p>
-            <h2 id="contact-title">Hablemos de la primera cita</h2>
-            <p>Para adaptar la web a la consulta real, sustituye los datos de ejemplo por la información profesional definitiva.</p>
+            <h2 id="contact-title">Solicita tu primera valoración clínica</h2>
+            <p>Si estás pasando por ansiedad, estrés o malestar emocional, puedes contactar para valorar tu situación y definir el mejor punto de inicio terapéutico.</p>
           </div>
           <address class="contact-list">
-            <a href="mailto:contacto@psicologiamontaner.es">
-              <i data-lucide="mail" aria-hidden="true"></i>
-              contacto@psicologiamontaner.es
-            </a>
-            <a href="tel:+34900000000">
-              <i data-lucide="phone" aria-hidden="true"></i>
-              +34 900 000 000
-            </a>
-            <a href="https://wa.me/34900000000">
-              <i data-lucide="message-circle" aria-hidden="true"></i>
-              WhatsApp
-            </a>
             <span>
               <i data-lucide="map-pin" aria-hidden="true"></i>
-              Calle Ejemplo 12, Madrid
+              Sevilla y alrededores
+            </span>
+            <span>
+              <i data-lucide="stethoscope" aria-hidden="true"></i>
+              Consulta psicológica clínica presencial y online
+            </span>
+            <span>
+              <i data-lucide="book-open" aria-hidden="true"></i>
+              Máster en Psicología General Sanitaria (2026)
+            </span>
+            <span>
+              <i data-lucide="message-square-heart" aria-hidden="true"></i>
+              Contacto inicial y orientación terapéutica
             </span>
           </address>
         </div>
@@ -443,20 +308,22 @@
     <footer class="site-footer" id="legal">
       <div class="section-shell footer-grid">
         <div>
-          <a class="brand footer-brand" href="#inicio" aria-label="Psicología Montaner">
-            <span class="brand-mark">PM</span>
+          <a class="brand footer-brand" href="#inicio" aria-label="Abel Montaner">
+            <span class="brand-mark" aria-hidden="true">
+              <img class="brand-icon" src="images/favicon.svg" alt="" />
+            </span>
             <span>
-              <strong>Psicología Montaner</strong>
-              <small>Psicología sanitaria</small>
+              <strong>Abel Montaner</strong>
+              <small>Consulta clínica</small>
             </span>
           </a>
-          <p>Consulta de psicología presencial y online. N.º de colegiado: M-00000.</p>
+          <p>Consulta de psicología clínica para acompañar procesos de ansiedad, estrés y malestar emocional con enfoque profesional y humano.</p>
         </div>
         <div class="footer-links" aria-label="Enlaces legales">
           <a href="#legal">Aviso legal</a>
           <a href="#legal">Política de privacidad</a>
           <a href="#legal">Política de cookies</a>
-          <a href="#reserva">Reservar cita</a>
+          <a href="#contacto">Contactar</a>
         </div>
       </div>
     </footer>
